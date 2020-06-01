@@ -1,0 +1,43 @@
+#include <math.h>
+#include <stdio.h>
+
+int main()
+{
+    int n, opcion;
+
+    do
+    {
+        printf( "\n   1. productos.", 163 );
+        printf( "\n   2. servicios.", 163 );
+        printf( "\n   3. conocenos.", 163 );
+        printf( "\n   4. contacto." );
+        printf("\n    5.iniciar secion. ");
+        printf( "\n\n   Introduzca opci%cn (1-4): ", 162 );
+
+        scanf( "%d", &opcion );
+
+        /* Inicio del anidamiento */
+
+        switch ( opcion )
+        {
+            case 1: printf( "\n   que producto quiere conocer?: ", 163 );
+                    scanf( "%d", &n );
+                    printf( "\n    %d es %d\n\n", n, n * 2 );
+                    break;
+
+            case 2: printf( "\n  que servicios quiere: ", 163 );
+                    scanf( "%d", &n );
+                    printf( "\n   La mitad de %d es %f\n\n", n, ( float ) n / 2 );
+                    break;
+
+            case 3: printf( "\n   aqui una breve historia de nosotros: ", 163 );
+                    scanf( "%d", &n );
+                    printf( "\n   El cuadrado de %d es %d\n\n", n, ( int ) pow( n, 2 ) );
+         }
+
+         /* Fin del anidamiento */
+
+    } while ( opcion != 4 );
+
+    return 0;
+}
